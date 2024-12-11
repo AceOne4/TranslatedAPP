@@ -3,65 +3,61 @@ import React from "react";
 import { FaShoppingCart, FaRocket, FaTools, FaBook } from "react-icons/fa";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+
 export default function WhyUs() {
-  const courseHighlights = [
+  const t = useTranslations("HomePage.WhyUs");
+
+  // Map icon indices to React Icons
+  const iconMap = [FaShoppingCart, FaRocket, FaTools, FaBook];
+
+  // Get points as an array from the JSON
+  const points = [
     {
-      title: "Real-World Applications",
-      description:
-        "Students build a production-ready application that includes Ecommerce, Point of Sale, and Inventory Management systems.",
-      iconColor: "bg-purple-900",
-      icon: FaShoppingCart,
+      title: t("points0-title"),
+      description: t("points0-description"),
     },
     {
-      title: "Advanced Yet Accessible",
-      description:
-        "The course tackles advanced concepts explained step-by-step, making it suitable for all skill levels.",
-      iconColor: "bg-pink-900",
-      icon: FaRocket,
+      title: t("points1-title"),
+      description: t("points1-description"),
     },
     {
-      title: "Hands-On Learning",
-      description:
-        "Emphasizes practical, project-based learning rather than just theoretical knowledge.",
-      iconColor: "bg-orange-900",
-      icon: FaTools,
+      title: t("points2-title"),
+      description: t("points2-description"),
     },
     {
-      title: "Comprehensive Curriculum",
-      description:
-        "Covers fullstack development with Next.js, TypeScript, Prisma, and MongoDB, ensuring a thorough understanding of modern web development.",
-      iconColor: "bg-teal-900",
-      icon: FaBook,
+      title: t("points3-title"),
+      description: t("points3-description"),
     },
   ];
 
   return (
     <div className="min-h-screen py-40 max-w-6xl mx-auto">
       <h2 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-balance text-center py-4">
-        Why Choose this Course?
+        {t("title")}
       </h2>
       <div className="py-8">
         <div className="grid grid-col-1 lg:grid-cols-2 gap-6">
-          {courseHighlights.map((item, i) => {
-            const Icon = item.icon;
+          {points.map((point, i) => {
+            const Icon = iconMap[i]; // Map index to the corresponding icon
             return (
               <div
                 key={i}
-                className="bg-blue-50 rounded-md shadow p-4 flex  gap-4"
+                className="rounded-md shadow p-4 flex gap-4 dark:border-slate-600 dark:border dark:bg-slate-700"
               >
                 <div
                   className={cn(
                     "w-16 h-16 rounded-lg text-gray-50 flex items-center justify-center flex-shrink-0",
-                    item.iconColor
+                    `bg-${["purple", "pink", "orange", "teal"][i]}-800`
                   )}
                 >
                   <Icon className="w-8 h-8" />
                 </div>
-                <div className="">
+                <div>
                   <h2 className="scroll-m-20 text-2xl font-semibold tracking-tight">
-                    {item.title}
+                    {point.title}
                   </h2>
-                  <p className="pt-3">{item.description}</p>
+                  <p className="pt-3">{point.description}</p>
                 </div>
               </div>
             );
@@ -71,7 +67,7 @@ export default function WhyUs() {
       <div className="flex items-center justify-center">
         <Button size={"lg"}>
           <Link href="https://coding-school-typescript.vercel.app/courses/next">
-            Enroll Now
+            {t("enrollNow")}
           </Link>
         </Button>
       </div>

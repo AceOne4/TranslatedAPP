@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css */
+
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+}
+
+/* You can add additional styles for RTL if needed, like reversing padding or margins for certain components */
+
 @layer base {
   :root {
     --background: 0 0% 100%;

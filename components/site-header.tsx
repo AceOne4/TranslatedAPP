@@ -1,27 +1,35 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { ModeToggle } from "./mode-toggle";
 import { Button } from "./ui/button";
+import LocalSwitcherSelect from "./LocalSwitcherSelect";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 export default function SiteHeader() {
+  const t = useTranslations("Layout.Navigation");
+  const { locale } = useParams();
+
   const navLinks = [
     {
-      title: "Course Program",
-      href: "/course-program",
+      title: t("courseProgram"),
+      href: `/${locale}/course-program`,
     },
     {
-      title: "Bootcamp",
-      href: "/bootcamp",
+      title: t("bootcamp"),
+      href: `/${locale}/bootcamp`,
     },
     {
-      title: "Community",
-      href: "/community",
+      title: t("community"),
+      href: `/${locale}/community`,
     },
     {
-      title: "About Us",
-      href: "/about",
+      title: t("aboutUs"),
+      href: `/${locale}/about`,
     },
   ];
+
   return (
     <div>
       <header className="flex items-center justify-between max-w-6xl mx-auto py-4">
@@ -39,20 +47,10 @@ export default function SiteHeader() {
         </nav>
         <div className="flex items-center space-x-3">
           <ModeToggle />
-          <div className="flex items-center">
-            <select
-              id="locale"
-              name="locale"
-              className="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-            >
-              <option>EN</option>
-              <option>FR</option>
-              <option>AR</option>
-            </select>
-          </div>
+          <LocalSwitcherSelect />
           <Button>
             <Link href="https://coding-school-typescript.vercel.app/courses/next">
-              Explore Course
+              {t("exploreCourse")}
             </Link>
           </Button>
         </div>

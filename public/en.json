@@ -15,25 +15,16 @@
       "enrollNow": "Enroll Now"
     },
     "WhyUs": {
+      "enrollNow": "Enroll Now",
       "title": "Why Choose this Course?",
-      "points": [
-        {
-          "title": "Real-World Applications",
-          "description": "Students build a production-ready application that includes Ecommerce, Point of Sale, and Inventory Management systems."
-        },
-        {
-          "title": "Advanced Yet Accessible",
-          "description": "The course tackles advanced concepts explained step-by-step, making it suitable for all skill levels."
-        },
-        {
-          "title": "Hands-On Learning",
-          "description": "Emphasizes practical, project-based learning rather than just theoretical knowledge."
-        },
-        {
-          "title": "Comprehensive Curriculum",
-          "description": "Covers fullstack development with Next.js, TypeScript, Prisma, and MongoDB, ensuring a thorough understanding of modern web development."
-        }
-      ]
+      "points0-title": "Real-World Applications",
+      "points0-description": "Students build a production-ready application that includes Ecommerce, Point of Sale, and Inventory Management systems.",
+      "points1-title": "Advanced Yet Accessible",
+      "points1-description": "The course tackles advanced concepts explained step-by-step, making it suitable for all skill levels.",
+      "points2-title": "Hands-On Learning",
+      "points2-description": "Emphasizes practical, project-based learning rather than just theoretical knowledge.",
+      "points3-title": "Comprehensive Curriculum",
+      "points3-description": "Covers fullstack development with Next.js, TypeScript, Prisma, and MongoDB, ensuring a thorough understanding of modern web development."
     }
   },
   "AboutPage": {

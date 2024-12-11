@@ -15,25 +15,16 @@
       "enrollNow": "Inscrivez-vous Maintenant"
     },
     "WhyUs": {
-      "title": "Pourquoi Choisir ce Cours ?",
-      "points": [
-        {
-          "title": "Applications du Monde Réel",
-          "description": "Les étudiants construisent une application prête pour la production qui inclut des systèmes de commerce électronique, de point de vente et de gestion des stocks."
-        },
-        {
-          "title": "Avancé mais Accessible",
-          "description": "Le cours aborde des concepts avancés expliqués étape par étape, ce qui le rend adapté à tous les niveaux de compétence."
-        },
-        {
-          "title": "Apprentissage Pratique",
-          "description": "Mets l'accent sur l'apprentissage pratique basé sur des projets plutôt que sur la simple théorie."
-        },
-        {
-          "title": "Programme Complet",
-          "description": "Couvre le développement fullstack avec Next.js, TypeScript, Prisma et MongoDB, garantissant une compréhension approfondie du développement web moderne."
-        }
-      ]
+      "enrollNow": "Inscrivez-vous maintenant",
+      "title": "Pourquoi choisir ce cours ?",
+      "points0-title": "Applications réelles",
+      "points0-description": "Les étudiants développent une application prête pour la production qui comprend des systèmes de commerce électronique, de point de vente et de gestion des stocks.",
+      "points1-title": "Avancé mais accessible",
+      "points1-description": "Le cours aborde des concepts avancés expliqués étape par étape, ce qui le rend adapté à tous les niveaux de compétence.",
+      "points2-title": "Apprentissage pratique",
+      "points2-description": "Met l'accent sur un apprentissage pratique basé sur des projets plutôt que sur des connaissances purement théoriques.",
+      "points3-title": "Programme complet",
+      "points3-description": "Couvre le développement fullstack avec Next.js, TypeScript, Prisma et MongoDB, garantissant une compréhension approfondie du développement web moderne."
     }
   },
   "AboutPage": {
